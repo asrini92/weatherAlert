@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {GET_REPORT_DATA} from './service/weather_service.js';
 
 class App extends Component {
+
+  componentDidMount(){ 
+    var report = GET_REPORT_DATA("Bangalore");
+    console.log(report);
+  }
+ 
   render() {
     return (
       <div className="App">
